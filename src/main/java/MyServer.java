@@ -14,26 +14,18 @@ public class MyServer {
         });
     }
 
-    /**
-     * Run the server for manual testing
-     * @param args ignored, no command line args
-     */
+
     public static void main(String[] args) {
         MyServer server = new MyServer();
         server.start(DEFAULT_PORT);
     }
 
-    /**
-     * Start the server
-     * @param port the port on which to start the server
-     */
+
     public void start(int port) {
         this.javalin.start(port);
     }
 
-    /**
-     * Stop the server
-     */
+
     public void stop() {
         this.javalin.close();
         this.javalin.stop();
